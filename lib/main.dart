@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:wasel_app/core/features/navigation/main_screen.dart';
 import 'package:wasel_app/core/features/reviews/model/user_review_model.dart';
 import 'package:wasel_app/core/features/reviews/user_review_screen.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
+import 'package:wasel_app/core/theme/light_theme.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -18,11 +20,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.grey.shade500),
-        scaffoldBackgroundColor: LightColors.primaryColor,
-      ),
-      home: UserReviewScreen(),
+      theme: lightTheme,
+      home:MainScreen(),
     );
   }
 }
