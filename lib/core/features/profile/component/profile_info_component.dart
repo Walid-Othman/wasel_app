@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wasel_app/core/features/profile/custome_list_tilte.dart';
-import 'package:wasel_app/core/features/profile/widget/cart_contanir.dart';
+import 'package:wasel_app/core/shared/widgets/cart_contanir.dart';
 
 class ProfileInfoComponent extends StatelessWidget {
   const ProfileInfoComponent({super.key});
