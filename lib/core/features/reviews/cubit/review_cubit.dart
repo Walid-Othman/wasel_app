@@ -7,12 +7,11 @@ class ReviewCubit extends Cubit<ReviewState> {
   ReviewCubit() : super(ReviewState());
 
   void fetchReviews() async {
-    // البدء في التحميل
+       
     emit(state.copyWith(status: RequestStatus.loading));
     await Future.delayed(Duration(seconds: 5));
     try {
-      // محاكاة جلب البيانات
-      // final data = await DioPackage().get('reviews');
+      
 
       emit(
         state.copyWith(
@@ -58,7 +57,7 @@ class ReviewCubit extends Cubit<ReviewState> {
               userImage: "",
               date: "2026-04-11",
             ),
-          ], // ضع البيانات القادمة هنا
+          ],     
         ),
       );
     } catch (e) {
