@@ -28,13 +28,10 @@ ThemeData lightTheme = ThemeData(
   // ),
   // progressIndicatorTheme: ProgressIndicatorThemeData(color: Colors.blue[800]),
   scaffoldBackgroundColor: LightColors.primaryColor,
-  // appBarTheme: AppBarTheme(
-  //   backgroundColor: Color(0xFFF6F7F9),
-  //   toolbarHeight: 4,
-  //   centerTitle: true,
-  //   foregroundColor: Color(0xFF161f18),
-  //   titleTextStyle: TextStyle(fontSize: 20, color: Color(0xFF161f18)),
-  // ),
+  appBarTheme: AppBarTheme(
+  surfaceTintColor: Colors.transparent,
+  backgroundColor: LightColors.primaryColor,
+  ),
   // textTheme: TextTheme(
   //   displayMedium: TextStyle(
   //     fontSize: 28.sp,
