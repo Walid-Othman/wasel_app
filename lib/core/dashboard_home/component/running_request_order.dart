@@ -1,4 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:wasel_app/core/dashboard_home/component/custom_order_card.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
 
 class RunningRequestOrder extends StatelessWidget {
@@ -10,6 +12,15 @@ class RunningRequestOrder extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
+                    onTap: (){
+                      showModalBottomSheet(
+                        isScrollControlled: true,
+                        
+                        context: context, builder: (context){
+                        
+                            return CustomOrderCard();
+                      });
+                    },
                     child: Container(
                       padding: EdgeInsets.all(10),
                       width: 156,
