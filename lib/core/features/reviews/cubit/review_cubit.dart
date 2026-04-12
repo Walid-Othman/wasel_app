@@ -9,7 +9,7 @@ class ReviewCubit extends Cubit<ReviewState> {
   void fetchReviews() async {
        
     emit(state.copyWith(status: RequestStatus.loading));
-    await Future.delayed(Duration(seconds: 5));
+    await Future.delayed(Duration(seconds: 1));
     try {
       
 

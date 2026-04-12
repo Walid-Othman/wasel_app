@@ -27,7 +27,7 @@ ThemeData lightTheme = ThemeData(
   //   }),
   // ),
   // progressIndicatorTheme: ProgressIndicatorThemeData(color: Colors.blue[800]),
-  scaffoldBackgroundColor: LightColors.primaryColor,
+  scaffoldBackgroundColor:LightColors.primaryColor,
   appBarTheme: AppBarTheme(
   surfaceTintColor: Colors.transparent,
   backgroundColor: LightColors.primaryColor,

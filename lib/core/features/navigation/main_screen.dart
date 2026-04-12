@@ -4,7 +4,6 @@ import 'package:wasel_app/core/dashboard_home/home_screen.dart';
 import 'package:wasel_app/core/features/details/food_details_screen.dart';
 import 'package:wasel_app/core/features/notifications/notifications_screen.dart';
 import 'package:wasel_app/core/features/profile/profile_screen.dart';
-import 'package:wasel_app/core/features/reviews/user_review_screen.dart';
 import 'package:wasel_app/core/menu/menu_screen.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
 
@@ -19,7 +18,7 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
   List<Widget> screens = [
-    UserReviewScreen(),
+    HomeScreen(),
     MenuScreen(),
     FoodDetailsScreen(),
     NotificationsScreen(),
