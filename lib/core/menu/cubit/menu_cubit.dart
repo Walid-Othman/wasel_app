@@ -9,7 +9,7 @@ class MenuCubit extends Cubit<MenuState> {
   MenuCubit() : super(MenuState());
   void fetchMenu() async {
      emit(state.copyWith(status: RequestStatus.loading));
-    await Future.delayed(Duration(seconds: 5));
+    await Future.delayed(Duration(seconds: 1));
     try {
       emit(
         state.copyWith(
