@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wasel_app/core/config/request_status.dart';
-import 'package:wasel_app/core/dashboard_home/component/custom_order_card_with_shimmer.dart';
-import 'package:wasel_app/core/dashboard_home/orders/cubit/orders_cubit.dart';
+import 'package:wasel_app/core/features/dashboard_home/component/custom_order_card_with_shimmer.dart';
+import 'package:wasel_app/core/features/dashboard_home/orders/cubit/orders_cubit.dart';
 import 'package:wasel_app/core/di/injection_container.dart';
 import 'package:wasel_app/core/shared/custome_cached_network_image.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:wasel_app/core/dashboard_home/component/custom_order_card.dart';
+import 'package:wasel_app/core/features/dashboard_home/component/custom_order_card.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
 
 class RunningRequestOrder extends StatelessWidget {

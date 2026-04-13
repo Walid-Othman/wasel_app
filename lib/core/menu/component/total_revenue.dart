@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
-import 'package:wasel_app/core/dashboard_home/component/revenue_bar_chart.dart';
+import 'package:wasel_app/core/features/dashboard_home/component/revenue_bar_chart.dart';
 
 class TotalRevenue extends StatelessWidget {
   TotalRevenue({super.key});

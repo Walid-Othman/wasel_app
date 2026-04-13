@@ -1,5 +1,5 @@
 import 'package:get_it/get_it.dart';
-import 'package:wasel_app/core/dashboard_home/orders/cubit/orders_cubit.dart';
+import 'package:wasel_app/core/features/dashboard_home/orders/cubit/orders_cubit.dart';
 import 'package:wasel_app/core/features/notifications_messages/messages/cubit/messages_cubit.dart';
 import 'package:wasel_app/core/features/notifications_messages/notifications/cubit/notifications_cubit.dart';
 

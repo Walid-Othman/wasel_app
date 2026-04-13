@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:wasel_app/core/dashboard_home/component/header.dart';
-import 'package:wasel_app/core/dashboard_home/component/populer_items.dart';
-import 'package:wasel_app/core/dashboard_home/component/reviews_componnet.dart';
+import 'package:wasel_app/core/features/dashboard_home/component/header.dart';
+import 'package:wasel_app/core/features/dashboard_home/component/populer_items.dart';
+import 'package:wasel_app/core/features/dashboard_home/component/reviews_componnet.dart';
 
-import 'package:wasel_app/core/dashboard_home/component/running_request_order.dart';
+import 'package:wasel_app/core/features/dashboard_home/component/running_request_order.dart';
 
 import 'package:wasel_app/core/menu/component/total_revenue.dart';
 

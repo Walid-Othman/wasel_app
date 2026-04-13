@@ -4,6 +4,7 @@ import 'package:wasel_app/core/features/navigation/main_screen.dart';
 import 'package:wasel_app/core/features/notifications_messages/messages/model/messages_model.dart';
 import 'package:wasel_app/core/features/notifications_messages/notifications/model/notifications_model.dart';
 import 'package:wasel_app/core/features/reviews/model/user_review_model.dart';
+import 'package:wasel_app/core/menu/model/ingredient_model.dart';
 import 'package:wasel_app/core/menu/model/menu_model.dart';
 import 'package:wasel_app/core/theme/light_theme.dart';
 import 'core/di/injection_container.dart' as di;
@@ -15,6 +16,7 @@ void main() async {
   Hive.registerAdapter(MenuModelAdapter());
   Hive.registerAdapter(NotificationsModelAdapter());
   Hive.registerAdapter(MessagesModelAdapter());
+  Hive.registerAdapter(IngredientModelAdapter());
 }
 
 class MyApp extends StatelessWidget {
