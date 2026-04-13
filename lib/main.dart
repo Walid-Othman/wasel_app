@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:wasel_app/core/features/navigation/main_screen.dart';
+import 'package:wasel_app/core/features/notifications_messages/messages/model/messages_model.dart';
+import 'package:wasel_app/core/features/notifications_messages/notifications/model/notifications_model.dart';
 import 'package:wasel_app/core/features/reviews/model/user_review_model.dart';
 import 'package:wasel_app/core/menu/model/menu_model.dart';
 import 'package:wasel_app/core/theme/light_theme.dart';
@@ -11,6 +13,8 @@ void main() async {
   await di.init();
   Hive.registerAdapter(UserReviewModelAdapter());
   Hive.registerAdapter(MenuModelAdapter());
+  Hive.registerAdapter(NotificationsModelAdapter());
+  Hive.registerAdapter(MessagesModelAdapter());
 }
 
 class MyApp extends StatelessWidget {
