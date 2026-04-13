@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wasel_app/core/features/details/food_details_screen.dart';
 import 'package:wasel_app/core/menu/component/custom_menu_with_shimer.dart';
 import 'package:wasel_app/core/menu/cubit/menu_cubit.dart';
 import 'package:wasel_app/core/shared/custome_cached_network_image.dart';
@@ -45,15 +46,20 @@ class CustomMenu extends StatelessWidget {
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Color(0xFF98A8B8),
-                                  borderRadius: BorderRadius.circular(16),
-                                ),
-                                child: CustomeCachedNetworkImage(
-                                  urlImage: data.urlImage,
-                                  width: 102,
-                                  hight: 102,
+                              GestureDetector(
+                                onTap: (){
+                                  Navigator.push(context,MaterialPageRoute(builder: (context)=>FoodDetailsScreen(data:data)));
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF98A8B8),
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child: CustomeCachedNetworkImage(
+                                    urlImage: data.urlImage,
+                                    width: 102,
+                                    hight: 102,
+                                  ),
                                 ),
                               ),
                               SizedBox(width: 8),

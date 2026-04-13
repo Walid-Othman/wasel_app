@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wasel_app/core/config/request_status.dart';
+import 'package:wasel_app/core/features/details/food_details_screen.dart';
 import 'package:wasel_app/core/menu/category_model.dart';
 import 'package:wasel_app/core/menu/component/Custom_menu.dart';
 import 'package:wasel_app/core/menu/cubit/menu_cubit.dart';
@@ -33,9 +34,10 @@ class MenuScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       itemCount: CategoryModel.categories.length,
                       itemBuilder: (context, index) {
+                        
                         return GestureDetector(
                           onTap: () {
-                            print(CategoryModel.categories[index].id);
+                            
                           },
                           child: Container(
                             margin: EdgeInsets.symmetric(horizontal: 20),

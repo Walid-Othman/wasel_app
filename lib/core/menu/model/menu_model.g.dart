@@ -24,13 +24,16 @@ class MenuModelAdapter extends TypeAdapter<MenuModel> {
       category: fields[4] as String,
       reviewCount: fields[5] as int,
       rating: fields[6] as double,
+      descraption: fields[7] as String,
+      foodImages: (fields[8] as List).cast<String>(),
+      ingredients: (fields[9] as List).cast<IngredientModel>(),
     );
   }
 
   @override
   void write(BinaryWriter writer, MenuModel obj) {
     writer
-      ..writeByte(7)
+      ..writeByte(10)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -44,7 +47,13 @@ class MenuModelAdapter extends TypeAdapter<MenuModel> {
       ..writeByte(5)
       ..write(obj.reviewCount)
       ..writeByte(6)
-      ..write(obj.rating);
+      ..write(obj.rating)
+      ..writeByte(7)
+      ..write(obj.descraption)
+      ..writeByte(8)
+      ..write(obj.foodImages)
+      ..writeByte(9)
+      ..write(obj.ingredients);
   }
 
   @override
@@ -70,6 +79,13 @@ MenuModel _$MenuModelFromJson(Map<String, dynamic> json) => MenuModel(
       category: json['category'] as String,
       reviewCount: (json['review_count'] as num).toInt(),
       rating: (json['rating'] as num).toDouble(),
+      descraption: json['descraption'] as String,
+      foodImages: (json['foodImages'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      ingredients: (json['ingredients'] as List<dynamic>)
+          .map((e) => IngredientModel.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$MenuModelToJson(MenuModel instance) => <String, dynamic>{
@@ -80,4 +96,7 @@ Map<String, dynamic> _$MenuModelToJson(MenuModel instance) => <String, dynamic>{
       'category': instance.category,
       'review_count': instance.reviewCount,
       'rating': instance.rating,
+      'descraption': instance.descraption,
+      'foodImages': instance.foodImages,
+      'ingredients': instance.ingredients,
     };

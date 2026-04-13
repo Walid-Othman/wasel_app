@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:wasel_app/core/config/request_status.dart';
-import 'package:wasel_app/core/dashboard_home/orders/order_model.dart';
+import 'package:wasel_app/core/features/dashboard_home/orders/order_model.dart';
 
 part 'orders_state.dart';
 

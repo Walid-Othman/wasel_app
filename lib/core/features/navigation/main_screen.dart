@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:wasel_app/core/dashboard_home/home_screen.dart';
+import 'package:wasel_app/core/features/dashboard_home/home_screen.dart';
 import 'package:wasel_app/core/features/details/food_details_screen.dart';
 import 'package:wasel_app/core/features/notifications_messages/navigation/navigation_screen.dart';
 import 'package:wasel_app/core/features/notifications_messages/notifications_screen.dart';
 import 'package:wasel_app/core/features/profile/profile_screen.dart';
+import 'package:wasel_app/core/features/reviews/user_review_screen.dart';
 import 'package:wasel_app/core/menu/menu_screen.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
 
@@ -21,7 +22,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> screens = [
     HomeScreen(),
     MenuScreen(),
-    FoodDetailsScreen(),
+    UserReviewScreen(),
     NavigationScreen(),
     ProfileScreen(),
   ];

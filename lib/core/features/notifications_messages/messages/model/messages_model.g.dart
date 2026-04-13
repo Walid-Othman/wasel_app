@@ -66,7 +66,7 @@ MessagesModel _$MessagesModelFromJson(Map<String, dynamic> json) =>
       userImage: json['userImage'] as String,
       time: json['time'] as String,
       lastMessage: json['lastMessage'] as String,
-      unReadMessagesCount: (json['messagesCount'] as num).toInt(),
+      unReadMessagesCount: (json['unReadMessagesCount'] as num).toInt(),
     );
 
 Map<String, dynamic> _$MessagesModelToJson(MessagesModel instance) =>
@@ -76,5 +76,5 @@ Map<String, dynamic> _$MessagesModelToJson(MessagesModel instance) =>
       'userImage': instance.userImage,
       'time': instance.time,
       'lastMessage': instance.lastMessage,
-      'messagesCount': instance.unReadMessagesCount,
+      'unReadMessagesCount': instance.unReadMessagesCount,
     };
