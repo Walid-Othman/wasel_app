@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:wasel_app/core/config/request_status.dart';
-import 'package:wasel_app/core/menu/model/ingredient_model.dart';
-import 'package:wasel_app/core/menu/model/menu_model.dart';
+import 'package:wasel_app/core/features/menu/model/ingredient_model.dart';
+import 'package:wasel_app/core/features/menu/model/menu_model.dart';
 
 part 'menu_state.dart';
 
@@ -11,6 +11,7 @@ class MenuCubit extends Cubit<MenuState> {
   void fetchMenu() async {
     emit(state.copyWith(status: RequestStatus.loading));
     await Future.delayed(Duration(seconds: 1));
+    if (isClosed) return;
     try {
       emit(
         state.copyWith(

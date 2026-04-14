@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wasel_app/core/features/dashboard_home/home_screen.dart';
-import 'package:wasel_app/core/features/details/food_details_screen.dart';
+
+import 'package:wasel_app/core/features/items/add_item_screen.dart';
 import 'package:wasel_app/core/features/notifications_messages/navigation/navigation_screen.dart';
-import 'package:wasel_app/core/features/notifications_messages/notifications_screen.dart';
+
 import 'package:wasel_app/core/features/profile/profile_screen.dart';
-import 'package:wasel_app/core/features/reviews/user_review_screen.dart';
-import 'package:wasel_app/core/menu/menu_screen.dart';
+
+import 'package:wasel_app/core/features/menu/menu_screen.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
 
 class MainScreen extends StatefulWidget {
@@ -22,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> screens = [
     HomeScreen(),
     MenuScreen(),
-    UserReviewScreen(),
+    AddItemScreen(),
     NavigationScreen(),
     ProfileScreen(),
   ];
@@ -64,8 +65,8 @@ class _MainScreenState extends State<MainScreen> {
                 border: BoxBorder.all(color: LightColors.orangeColor),
                 borderRadius: BorderRadius.circular(50),
               ),
-              
-              child: Icon(Icons.add,color: LightColors.orangeColor,),
+
+              child: Icon(Icons.add, color: LightColors.orangeColor),
             ),
             label: "",
           ),

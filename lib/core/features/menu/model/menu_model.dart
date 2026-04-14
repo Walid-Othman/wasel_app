@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:wasel_app/core/menu/model/ingredient_model.dart';
+import 'package:wasel_app/core/features/menu/model/ingredient_model.dart';
 
 part 'menu_model.g.dart';
 
