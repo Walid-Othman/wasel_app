@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wasel_app/core/features/details/component/Custome_ingridents.dart';
 import 'package:wasel_app/core/features/details/component/food_card.dart';
-import 'package:wasel_app/core/menu/model/menu_model.dart';
+import 'package:wasel_app/core/features/menu/model/menu_model.dart';
 import 'package:wasel_app/core/shared/custome_cached_network_image.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
 
