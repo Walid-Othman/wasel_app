@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 
 import 'package:wasel_app/core/features/dashboard_home/component/header.dart';
 import 'package:wasel_app/core/features/dashboard_home/component/populer_items.dart';
@@ -16,22 +17,22 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       body: Padding(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(AppSizes.r16),
         child: Column(
           children: [
-            SizedBox(height: 25,),
+            SizedBox(height: AppSizes.h25,),
             Header(),
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    SizedBox(height: 24),
+                    SizedBox(height: AppSizes.h24),
                     RunningRequestOrder(),
-                    SizedBox(height: 24),
+                    SizedBox(height: AppSizes.h24),
                     TotalRevenue(),
-                    SizedBox(height: 24),
+                    SizedBox(height: AppSizes.h24),
                     ReviewsComponnet(),
-                    SizedBox(height: 24),
+                    SizedBox(height: AppSizes.h24),
                     PopulerItems(),
                   ],
                 ),

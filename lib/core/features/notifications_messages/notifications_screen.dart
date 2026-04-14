@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/config/request_status.dart';
 import 'package:wasel_app/core/di/injection_container.dart';
 import 'package:wasel_app/core/features/notifications_messages/notifications/componnent/notifications_with_shimmer.dart';
@@ -41,15 +42,15 @@ final notificationsCubit = sl<NotificationsCubit>()..fetchNotifications();
                         itemBuilder: (context, index) {
                           final data = state.notifications[index];
                           return Container(
-                            padding: EdgeInsets.all(16),
+                            padding: EdgeInsets.all(AppSizes.r16),
                             child: Column(
                               children: [
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Container(
-                                      width: 54,
-                                      height: 54,
+                                      width: AppSizes.w54,
+                                      height: AppSizes.w54,
                                       decoration: BoxDecoration(
                                         color: Color(0xFF98A8B8),
                                         borderRadius: BorderRadius.circular(50),
@@ -58,9 +59,9 @@ final notificationsCubit = sl<NotificationsCubit>()..fetchNotifications();
                                         urlImage: data.userImage,
                                       ),
                                     ),
-                                    SizedBox(width: 18),
+                                    SizedBox(width: AppSizes.w18),
                                     SizedBox(
-                                      width: 180,
+                                      width: AppSizes.w180,
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -68,25 +69,25 @@ final notificationsCubit = sl<NotificationsCubit>()..fetchNotifications();
                                           Text(
                                             data.userName,
                                             style: TextStyle(
-                                              fontSize: 16,
+                                              fontSize: AppSizes.sp16,
                                               fontWeight: FontWeight.w600,
                                             ),
                                           ),
                                           Text(
                                             data.title,
                                             style: TextStyle(
-                                              fontSize: 14,
+                                              fontSize: AppSizes.sp14,
                                               fontWeight: FontWeight.w400,
                                               color: Color(0xFFA5A7B9),
                                             ),
                                             maxLines: 2,
                                             overflow: TextOverflow.ellipsis,
                                           ),
-                                          SizedBox(height: 4),
+                                          SizedBox(height: AppSizes.h4),
                                           Text(
                                             data.date,
                                             style: TextStyle(
-                                              fontSize: 14,
+                                              fontSize: AppSizes.sp14,
                                               fontWeight: FontWeight.w400,
                                               color: Color(0xFFA5A7B9),
                                             ),
@@ -96,8 +97,8 @@ final notificationsCubit = sl<NotificationsCubit>()..fetchNotifications();
                                     ),
                                     Spacer(),
                                     Container(
-                                      width: 54,
-                                      height: 54,
+                                      width: AppSizes.w54,
+                                      height: AppSizes.w54,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(14),
                                         color: Color(0xff98A8B8),
@@ -108,7 +109,7 @@ final notificationsCubit = sl<NotificationsCubit>()..fetchNotifications();
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 16),
+                                SizedBox(height: AppSizes.h16),
                                 Divider(color: Color(0xFFF0F4F9)),
                               ],
                             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/di/injection_container.dart';
 import 'package:wasel_app/core/features/reviews/cubit/review_cubit.dart';
 import 'package:wasel_app/core/features/reviews/user_review_screen.dart';
@@ -14,11 +15,11 @@ final reviewCubit = sl<ReviewCubit>()..fetchReviews();
                         bloc: reviewCubit,
                         builder: (context, state) {
                           return Container(
-                            padding: EdgeInsets.all(10),
+                            padding: EdgeInsets.all(AppSizes.r10),
                             width: double.infinity,
                             decoration: BoxDecoration(
                               color: LightColors.primaryColor,
-                              borderRadius: BorderRadius.circular(16),
+                              borderRadius: BorderRadius.circular(AppSizes.r16),
                             ),
                             child: Column(
                               children: [
@@ -29,7 +30,7 @@ final reviewCubit = sl<ReviewCubit>()..fetchReviews();
                                     Text(
                                       "Reviews",
                                       style: TextStyle(
-                                        fontSize: 14,
+                                        fontSize: AppSizes.sp14,
                                         fontWeight: FontWeight.w400,
                                         color: LightColors.primaryBlack,
                                       ),
@@ -47,7 +48,7 @@ final reviewCubit = sl<ReviewCubit>()..fetchReviews();
                                       child: Text(
                                         'See All Reviews',
                                         style: TextStyle(
-                                          fontSize: 14,
+                                          fontSize: AppSizes.sp14,
                                           fontWeight: FontWeight.w400,
                                           decoration: TextDecoration.underline,
                                           decorationColor:
@@ -58,7 +59,7 @@ final reviewCubit = sl<ReviewCubit>()..fetchReviews();
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 20),
+                                SizedBox(height: AppSizes.h20),
                                 Row(
                                   children: [
                                     Row(
@@ -67,22 +68,22 @@ final reviewCubit = sl<ReviewCubit>()..fetchReviews();
                                           Icons.star,
                                           color: LightColors.orangeColor,
                                         ),
-                                        SizedBox(width: 8),
+                                        SizedBox(width: AppSizes.w8),
                                         Text(
                                           "4.9",
                                           style: TextStyle(
                                             color: LightColors.orangeColor,
-                                            fontSize: 22,
+                                            fontSize: AppSizes.sp22,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                       ],
                                     ),
-                                    SizedBox(width: 20),
+                                    SizedBox(width: AppSizes.w20),
                                     Text(
                                       "Total ${state.reviews.length} Reviews",
                                       style: TextStyle(
-                                        fontSize: 14,
+                                        fontSize: AppSizes.sp14,
                                         fontWeight: FontWeight.w400,
                                       ),
                                     ),

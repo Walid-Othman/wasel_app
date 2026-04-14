@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/features/profile/custome_list_tilte.dart';
 import 'package:wasel_app/core/shared/widgets/cart_contanir.dart';
 
@@ -9,15 +10,15 @@ class ProfileInfoComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: SingleChildScrollView(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(AppSizes.r16),
         child: Column(
           children: [
-            SizedBox(height: 20),
+            SizedBox(height: AppSizes.h20),
             CartContanir(
               child: Column(
                 children: [
                   CustomeListTilte(onTap: () {}),
-                  SizedBox(height: 8),
+                  SizedBox(height: AppSizes.h8),
                   CustomeListTilte(
                     onTap: () {},
                     image: "assets/images/settings.svg",
@@ -26,7 +27,7 @@ class ProfileInfoComponent extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: AppSizes.h20),
             CartContanir(
               child: Column(
                 children: [
@@ -35,7 +36,7 @@ class ProfileInfoComponent extends StatelessWidget {
                     image: 'assets/images/withdrawal.svg',
                     title: 'Withdrawal History',
                   ),
-                  SizedBox(height: 8),
+                  SizedBox(height: AppSizes.h8),
                   CustomeListTilte(
                     onTap: () {},
                     image: "assets/images/receipt-outline.svg",
@@ -45,7 +46,7 @@ class ProfileInfoComponent extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: AppSizes.h20),
             CartContanir(
               child: CustomeListTilte(
                 image: "assets/images/command.svg",
@@ -53,7 +54,7 @@ class ProfileInfoComponent extends StatelessWidget {
                 onTap: () {},
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: AppSizes.h20),
             CartContanir(
               child: CustomeListTilte(
                 image: "assets/images/logOut.svg",

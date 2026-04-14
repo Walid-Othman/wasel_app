@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/features/items/componnet/custome_text_form_field.dart';
 import 'package:wasel_app/core/features/items/cubit/item_cubit.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
@@ -16,12 +17,12 @@ class PriceComponnet extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('PRICE'),
-            SizedBox(height: 20),
+            SizedBox(height: AppSizes.h20),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: 100,
+                  width: AppSizes.w100,
                   child: CustomeTextFormField(
                     hintText: "50",
                     icon: Icons.price_change,
@@ -30,7 +31,7 @@ class PriceComponnet extends StatelessWidget {
                     controller: itemCubit.price,
                   ),
                 ),
-                SizedBox(width: 15),
+                SizedBox(width: AppSizes.w15),
                 Checkbox(
                   activeColor: Colors.transparent,
                   checkColor: LightColors.orangeColor,

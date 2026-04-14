@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
 
 class Balance extends StatelessWidget {
@@ -8,12 +9,12 @@ class Balance extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Container(
             width: double.infinity,
-            height: 180,
+            height: AppSizes.h180,
             decoration: BoxDecoration(
               color: LightColors.orangeColor,
               borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(25),
-                bottomRight: Radius.circular(25),
+                bottomLeft: Radius.circular(AppSizes.r25),
+                bottomRight: Radius.circular(AppSizes.r25),
               ),
             ),
             child: Column(
@@ -22,26 +23,26 @@ class Balance extends StatelessWidget {
                   'Available Balance',
                   style: TextStyle(
                     color: LightColors.primaryColor,
-                    fontSize: 16,
+                    fontSize: AppSizes.sp16,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: AppSizes.h10),
                 Text(
                   '\$500.00',
                   style: TextStyle(
                     color: LightColors.primaryColor,
-                    fontSize: 40,
+                    fontSize: AppSizes.sp40,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: AppSizes.h20),
                 Container(
-                  width: 100,
-                  height: 37,
+                  width: AppSizes.w100,
+                  height: AppSizes.h37,
                   decoration: BoxDecoration(
                     border: BoxBorder.all(color: LightColors.primaryColor),
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(AppSizes.r5),
                   ),
                   child: TextButton(
                     onPressed: () {},
@@ -49,7 +50,7 @@ class Balance extends StatelessWidget {
                       "Withdraw",
                       style: TextStyle(
                         color: LightColors.primaryColor,
-                        fontSize: 10,
+                        fontSize: AppSizes.sp10,
                       ),
                     ),
                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/features/reviews/edit_review_screen.dart';
 import 'package:wasel_app/core/shared/custome_cached_network_image.dart';
 import 'package:wasel_app/core/shared/widgets/cart_contanir.dart';
@@ -10,7 +11,7 @@ class CustomeListReview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16),
+      padding:  EdgeInsets.all(AppSizes.r16),
       child: CustomScrollView(
         slivers: [
           SliverList.builder(
@@ -18,20 +19,20 @@ class CustomeListReview extends StatelessWidget {
             itemBuilder: (context, index) {
               final data = state.reviews[index];
               return Container(
-                margin: EdgeInsets.all(10),
+                margin: EdgeInsets.all(AppSizes.r10),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CircleAvatar(
-                      radius: 25,
+                      radius: AppSizes.r25,
                       backgroundColor: Color(0xFFF6F8FA),
                       child: CustomeCachedNetworkImage(
                         urlImage: data.userImage,
-                        width: 50,
-                        hight: 50,
+                        width: AppSizes.w50,
+                        hight: AppSizes.w50,
                       ),
                     ),
-                    SizedBox(width: 10),
+                    SizedBox(width: AppSizes.w10),
                     Expanded(
                       child: CartContanir(
                         child: Column(
@@ -47,29 +48,29 @@ class CustomeListReview extends StatelessWidget {
                                     showModalBottomSheet(
                                       context: context,
 
-                                      shape: const RoundedRectangleBorder(
+                                      shape:  RoundedRectangleBorder(
                                         borderRadius: BorderRadius.vertical(
-                                          top: Radius.circular(20),
+                                          top: Radius.circular(AppSizes.r20),
                                         ),
                                       ),
                                       builder: (context) {
                                         return Container(
-                                          padding: const EdgeInsets.symmetric(
-                                            vertical: 20,
+                                          padding:  EdgeInsets.symmetric(
+                                            vertical: AppSizes.ph20,
                                           ),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
                                               Container(
-                                                width: 40,
-                                                height: 5,
+                                                width: AppSizes.w40,
+                                                height: AppSizes.h5,
                                                 decoration: BoxDecoration(
                                                   color: Colors.grey[300],
                                                   borderRadius:
-                                                      BorderRadius.circular(10),
+                                                      BorderRadius.circular(AppSizes.r10),
                                                 ),
                                               ),
-                                              const SizedBox(height: 20),
+                                               SizedBox(height: AppSizes.h20),
 
                                               ListTile(
                                                 leading: const Icon(
@@ -155,12 +156,12 @@ class CustomeListReview extends StatelessWidget {
                             Text(
                               data.userName,
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: AppSizes.sp14,
                                 color: Color(0xFF32343E),
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(height: 10),
+                            SizedBox(height: AppSizes.h10),
                             Row(
                               children: List.generate(5, (index) {
                                 return Icon(
@@ -172,7 +173,7 @@ class CustomeListReview extends StatelessWidget {
                                 );
                               }),
                             ),
-                            SizedBox(height: 10),
+                            SizedBox(height: AppSizes.h10),
                             Text(data.comment),
                           ],
                         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
 import 'package:wasel_app/core/features/dashboard_home/component/revenue_bar_chart.dart';
 
@@ -8,11 +9,11 @@ class TotalRevenue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(AppSizes.r10),
       width: double.infinity,
       decoration: BoxDecoration(
         color: LightColors.primaryColor,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppSizes.r16),
       ),
       child: Column(
         children: [
@@ -24,29 +25,29 @@ class TotalRevenue extends StatelessWidget {
                   Text(
                     "Total Revenue",
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: AppSizes.sp14,
                       fontWeight: FontWeight.w400,
                       color: LightColors.primaryBlack,
                     ),
                   ),
-                  SizedBox(height: 5),
+                  SizedBox(height: AppSizes.h5),
                   Text(
                     "\$2,241",
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: AppSizes.sp22,
                       fontWeight: FontWeight.bold,
                       color: LightColors.orangeColor,
                     ),
                   ),
                 ],
               ),
-              SizedBox(width: 18),
+              SizedBox(width: AppSizes.w18),
 
               Container(
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.all(AppSizes.r10),
                 decoration: BoxDecoration(
                   border: BoxBorder.all(color: Color(0xFFE8EAED)),
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(AppSizes.r16),
                 ),
                 child: Column(
                   children: [
@@ -55,7 +56,7 @@ class TotalRevenue extends StatelessWidget {
                         Text(
                           "Daily",
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: AppSizes.sp12,
                             fontWeight: FontWeight.w400,
                             color: Color(0xFF9C9BA6),
                           ),
@@ -68,7 +69,7 @@ class TotalRevenue extends StatelessWidget {
                       // width: 100,
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(50),
+                        borderRadius: BorderRadius.circular(AppSizes.r50),
                         boxShadow: [
                           BoxShadow(
                             color: LightColors.primaryBlack,
@@ -78,7 +79,7 @@ class TotalRevenue extends StatelessWidget {
                       ),
                       child: SizedBox(
                         height: 0,
-                        width: 50,
+                        width: AppSizes.w50,
                         child: ListWheelScrollView(
                           itemExtent: 50,
                           children: days
@@ -94,7 +95,7 @@ class TotalRevenue extends StatelessWidget {
               Text(
                 "See Details",
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: AppSizes.sp14,
                   fontWeight: FontWeight.w400,
                   decoration: TextDecoration.underline,
                   decorationThickness: 1.5,
@@ -104,10 +105,10 @@ class TotalRevenue extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 20),
+          SizedBox(height: AppSizes.h20),
           SizedBox(
             width: double.infinity,
-            height: 200,
+            height: AppSizes.h200,
             child: RevenueBarChart(),
           ),
         ],

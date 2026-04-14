@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 
 class RevenueBarChart extends StatefulWidget {
   const RevenueBarChart({super.key});
@@ -59,7 +60,7 @@ class _RevenueBarChartState extends State<RevenueBarChart> {
                 return SideTitleWidget(
                   axisSide: meta.axisSide,
                   space: 4,
-                  child: Text(hours[index], style: const TextStyle(fontSize: 10, color: Colors.grey)),
+                  child: Text(hours[index], style:  TextStyle(fontSize:AppSizes.sp12, color: Colors.grey)),
                 );
               },
             ),
@@ -95,7 +96,7 @@ class _RevenueBarChartState extends State<RevenueBarChart> {
         BarChartRodData(
           toY: y,
           color: LightColors.orangeColor,
-          width: 16,
+          width:AppSizes.w16,
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(6),
             topRight: Radius.circular(6),
