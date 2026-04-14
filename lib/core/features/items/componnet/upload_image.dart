@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:wasel_app/core/di/injection_container.dart';
 import 'package:wasel_app/core/features/items/cubit/item_cubit.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 
 class UploadImage extends StatelessWidget {
   const UploadImage({super.key});
@@ -17,9 +18,9 @@ class UploadImage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text('Upload photo/video'),
-            const SizedBox(height: 10),
+             SizedBox(height:  AppSizes.h10),
             SizedBox(
-              height: 120,
+              height: AppSizes.h120,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 // عدد العناصر = عدد الصور المرفوعة + 1 (لزر الإضافة)
@@ -30,11 +31,11 @@ class UploadImage extends StatelessWidget {
                     return GestureDetector(
                       onTap: () => itemCubit.pickImage(),
                       child: Container(
-                        margin: const EdgeInsets.all(8),
-                        width: 100,
+                        margin:  EdgeInsets.all(AppSizes.r10),
+                        width: AppSizes.w100,
                         child: DottedBorder(
                           borderType: BorderType.RRect,
-                          radius: const Radius.circular(16),
+                          radius:  Radius.circular(AppSizes.r16),
                           dashPattern: const [6, 4],
                           color: Colors.grey.shade400,
                           child: Center(
@@ -42,7 +43,7 @@ class UploadImage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 SvgPicture.asset('assets/images/upload.svg'),
-                                SizedBox(height: 10),
+                                SizedBox(height: AppSizes.h10),
                                 Text(
                                   "Add",
                                   style: TextStyle(color: Colors.grey),
@@ -58,10 +59,10 @@ class UploadImage extends StatelessWidget {
                   return Stack(
                     children: [
                       Container(
-                        margin: const EdgeInsets.all(8),
-                        width: 100,
+                        margin:  EdgeInsets.all(AppSizes.r8),
+                        width: AppSizes.w100,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(AppSizes.r16),
                           image: DecorationImage(
                             image: FileImage(state.imageList[index]),
                             fit: BoxFit.cover,
@@ -74,8 +75,8 @@ class UploadImage extends StatelessWidget {
                         right: 0,
                         child: GestureDetector(
                           onTap: () => itemCubit.removeImage(index),
-                          child: const CircleAvatar(
-                            radius: 12,
+                          child:  CircleAvatar(
+                            radius: AppSizes.r12,
                             backgroundColor: Colors.red,
                             child: Icon(
                               Icons.close,

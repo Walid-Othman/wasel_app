@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 
 class CustomeTextFormField extends StatelessWidget {
   const CustomeTextFormField({
@@ -30,30 +31,30 @@ class CustomeTextFormField extends StatelessWidget {
       children: [
         if(title !=null)
         Text(title!),
-        SizedBox(height: 10),
+        SizedBox(height: AppSizes.h10),
         TextFormField(
           maxLines: maxLines??1,
           decoration: InputDecoration(
             hintText: hintText,
-            hintStyle: TextStyle(color: Colors.grey, fontSize: 14),
+            hintStyle: TextStyle(color: Colors.grey, fontSize: AppSizes.sp14),
 
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(AppSizes.r12),
               borderSide: BorderSide(color: Colors.grey.shade300, width: 1.5),
             ),
 
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(AppSizes.r12),
               borderSide: BorderSide(color: Colors.orange, width: 2),
             ),
 
             errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(AppSizes.r12),
               borderSide: BorderSide(color: Colors.red, width: 1.5),
             ),
 
             prefixIcon: Padding(
-              padding: isdescraption ? const EdgeInsets.only(bottom:75) :EdgeInsets.zero,
+              padding: isdescraption ?  EdgeInsets.only(bottom:AppSizes.ph75) :EdgeInsets.zero,
               child: Icon(icon, color: Colors.orange),
             ),
 

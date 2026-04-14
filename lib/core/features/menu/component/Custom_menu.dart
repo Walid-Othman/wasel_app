@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/features/details/food_details_screen.dart';
 import 'package:wasel_app/core/features/menu/component/custom_menu_with_shimer.dart';
 import 'package:wasel_app/core/features/menu/cubit/menu_cubit.dart';
@@ -40,8 +41,8 @@ class CustomMenu extends StatelessWidget {
                         final data = state.menu[index];
                         return Container(
                           margin: EdgeInsets.symmetric(
-                            horizontal: 5,
-                            vertical: 15,
+                            horizontal: AppSizes.mw5,
+                            vertical: AppSizes.mh15,
                           ),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,16 +54,16 @@ class CustomMenu extends StatelessWidget {
                                 child: Container(
                                   decoration: BoxDecoration(
                                     color: Color(0xFF98A8B8),
-                                    borderRadius: BorderRadius.circular(16),
+                                    borderRadius: BorderRadius.circular(AppSizes.r16),
                                   ),
                                   child: CustomeCachedNetworkImage(
                                     urlImage: data.urlImage,
-                                    width: 102,
-                                    hight: 102,
+                                    width: AppSizes.w102,
+                                    hight: AppSizes.w102,
                                   ),
                                 ),
                               ),
-                              SizedBox(width: 8),
+                              SizedBox(width: AppSizes.w8),
                               Expanded(
                                 child: Column(
                                   children: [
@@ -74,7 +75,7 @@ class CustomMenu extends StatelessWidget {
                                           data.title,
                                           style: TextStyle(
                                             color: LightColors.primaryBlack,
-                                            fontSize: 14,
+                                            fontSize: AppSizes.sp14,
                                             fontWeight: FontWeight.bold,
                                           ),
                                           maxLines: 1,
@@ -90,7 +91,7 @@ class CustomMenu extends StatelessWidget {
                                     Row(
                                       children: [
                                         Container(
-                                          padding: EdgeInsets.all(8),
+                                          padding: EdgeInsets.all(AppSizes.r8),
                                           decoration: BoxDecoration(
                                             color: Color(0x10762233),
                                             borderRadius: BorderRadius.circular(
@@ -109,17 +110,17 @@ class CustomMenu extends StatelessWidget {
                                           "\$${data.price}",
                                           style: TextStyle(
                                             color: LightColors.primaryBlack,
-                                            fontSize: 18,
+                                            fontSize: AppSizes.sp18,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                       ],
                                     ),
-                                    SizedBox(height: 10),
+                                    SizedBox(height: AppSizes.h10),
                                     Row(
                                       children: [
                                         Icon(
-                                          size: 14,
+                                          size: AppSizes.sp14,
                                           Icons.star,
                                           color: LightColors.orangeColor,
                                         ),
@@ -127,11 +128,11 @@ class CustomMenu extends StatelessWidget {
                                           data.rating.toString(),
                                           style: TextStyle(
                                             color: LightColors.orangeColor,
-                                            fontSize: 14,
+                                            fontSize: AppSizes.sp14,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
-                                        SizedBox(width: 4),
+                                        SizedBox(width: AppSizes.w4),
                                         Text(
                                           "(${data.reviewCount} Review)",
                                           style: TextStyle(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/features/menu/model/menu_model.dart';
 import 'package:wasel_app/core/shared/custome_cached_network_image.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
@@ -30,9 +31,9 @@ class _FoodCardState extends State<FoodCard> {
             children: [
          
               SizedBox(
-                height: 180,
+                height: AppSizes.h180,
                 child: ClipRRect( 
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(AppSizes.r20),
                   child: PageView.builder(
                     itemCount: widget.data.foodImages.length,
                     onPageChanged: (int page) {
@@ -52,13 +53,13 @@ class _FoodCardState extends State<FoodCard> {
               ),
      
               Positioned(
-                bottom: 15,
-                left: 15,
+                bottom:AppSizes.h15,
+                left: AppSizes.w15,
                 child: _buildBadge(widget.data.category,(){}),
               ),
               
               Positioned(
-                bottom: 20,
+                bottom: AppSizes.h20,
                 left: 0,
                 right: 0,
                 child: Row(
@@ -71,8 +72,8 @@ class _FoodCardState extends State<FoodCard> {
               ),
           
               Positioned(
-                bottom: 15,
-                right: 15,
+                bottom: AppSizes.h15,
+                right: AppSizes.w15,
                 child: _buildBadge("Delivery",()),
               ),
             ],
@@ -82,11 +83,11 @@ class _FoodCardState extends State<FoodCard> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(widget.data.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-              Text("\$${widget.data.price}", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              Text(widget.data.title, style: TextStyle(fontSize: AppSizes.sp18, fontWeight: FontWeight.bold)),
+              Text("\$${widget.data.price}", style: TextStyle(fontSize: AppSizes.sp18, fontWeight: FontWeight.bold)),
             ],
           ),
-          SizedBox(height: 8),
+          SizedBox(height: AppSizes.h8),
        
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -116,12 +117,12 @@ class _FoodCardState extends State<FoodCard> {
     return GestureDetector(
       onTap: ()=>onTap(),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+        padding: EdgeInsets.symmetric(horizontal: AppSizes.pw16, vertical: AppSizes.ph8),
         decoration: BoxDecoration(
           color: Color(0xFFFFFFFF),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(AppSizes.r20),
         ),
-        child: Text(text, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+        child: Text(text, style: TextStyle(fontWeight: FontWeight.bold, fontSize: AppSizes.sp12)),
       ),
     );
   }

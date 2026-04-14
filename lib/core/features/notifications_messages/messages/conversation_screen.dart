@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/config/request_status.dart';
 import 'package:wasel_app/core/di/injection_container.dart';
 import 'package:wasel_app/core/features/notifications_messages/messages/componanet/message_with_shimmer.dart';
@@ -45,11 +46,11 @@ class ConversationScreen extends StatelessWidget {
                               leading: Stack(
                                 children: [
                                   Container(
-                                    width: 50,
-                                    height: 50,
+                                    width: AppSizes.w50,
+                                    height: AppSizes.w50,
                                     decoration: BoxDecoration(
                                       color: Color(0xFF98A8B8),
-                                      borderRadius: BorderRadius.circular(50),
+                                      borderRadius: BorderRadius.circular(AppSizes.r50),
                                     ),
                                     child: CustomeCachedNetworkImage(
                                       urlImage: data.userImage,
@@ -59,8 +60,8 @@ class ConversationScreen extends StatelessWidget {
                                     bottom: 0,
                                     right: 0,
                                     child: Container(
-                                      width: 14,
-                                      height: 14,
+                                      width: AppSizes.w14,
+                                      height: AppSizes.w14,
                                       decoration: BoxDecoration(
                                         color: Colors.green,
                                         shape: BoxShape.circle,
@@ -78,14 +79,14 @@ class ConversationScreen extends StatelessWidget {
                               trailing: Column(
                                 children: [
                                   Text(data.time),
-                                  SizedBox(height: 8),
+                                  SizedBox(height: AppSizes.h8),
                                   Container(
                                     padding: EdgeInsets.symmetric(
-                                      horizontal: 6,
-                                      vertical: 4,
+                                      horizontal: AppSizes.pw6,
+                                      vertical: AppSizes.ph4,
                                     ),
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(50),
+                                      borderRadius: BorderRadius.circular(AppSizes.r50),
                                       color: LightColors.orangeColor,
                                     ),
                                     child: Text(
@@ -98,7 +99,7 @@ class ConversationScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            SizedBox(height: 18),
+                            SizedBox(height: AppSizes.h18),
                             Divider(color: Color(0xFFF0F4F9)),
                           ],
                         );

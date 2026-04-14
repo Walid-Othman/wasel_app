@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
 
 class CustomeListTilte extends StatelessWidget {
@@ -25,7 +26,7 @@ class CustomeListTilte extends StatelessWidget {
           borderRadius: BorderRadius.circular(100),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding:  EdgeInsets.all(AppSizes.r8),
           child: SvgPicture.asset(image ?? "assets/images/user.svg"),
         ),
       ),

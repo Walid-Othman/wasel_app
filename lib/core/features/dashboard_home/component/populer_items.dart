@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/features/menu/menu_screen.dart';
 import 'package:wasel_app/core/shared/custome_cached_network_image.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
@@ -9,11 +10,11 @@ class PopulerItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(AppSizes.r10),
       // height: 20,
       decoration: BoxDecoration(
         color: LightColors.primaryColor,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(AppSizes.r16),
       ),
       child: Column(
         children: [
@@ -22,7 +23,7 @@ class PopulerItems extends StatelessWidget {
               Text(
                 'Populer Items This Weeks',
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: AppSizes.sp14,
                   fontWeight: FontWeight.w400,
                   color: LightColors.primaryBlack,
                 ),
@@ -38,7 +39,7 @@ class PopulerItems extends StatelessWidget {
                 child: Text(
                   'See All',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: AppSizes.sp14,
                     fontWeight: FontWeight.w400,
                     decoration: TextDecoration.underline,
                     decorationColor: LightColors.orangeColor,
@@ -48,9 +49,9 @@ class PopulerItems extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 24),
+          SizedBox(height: AppSizes.h24),
           SizedBox(
-            height: 120,
+            height: AppSizes.h120,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 5,
@@ -59,9 +60,9 @@ class PopulerItems extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
-                        margin: EdgeInsets.all(5),
+                        margin: EdgeInsets.all(AppSizes.r5),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(AppSizes.r16),
                           color: Colors.grey[300],
                         ),
                         child: CustomeCachedNetworkImage(urlImage: ""),
@@ -69,7 +70,7 @@ class PopulerItems extends StatelessWidget {
                       Text(
                         "pizza",
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: AppSizes.sp16,
                           fontWeight: FontWeight.bold,
                           color: LightColors.orangeColor,
                         ),

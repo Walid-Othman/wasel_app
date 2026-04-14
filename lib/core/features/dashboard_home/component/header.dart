@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
 
 class Header extends StatelessWidget {
@@ -9,20 +10,20 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding:  EdgeInsets.all(AppSizes.r8),
       child: Row(
                   children: [
                     Container(
-                      padding: EdgeInsets.all(10),
-                      width: 45,
-                      height: 45,
+                      padding: EdgeInsets.all(AppSizes.r10),
+                      width: AppSizes.w45,
+                      height: AppSizes.w45,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
+                        borderRadius: BorderRadius.circular(AppSizes.r50),
                         color: LightColors.primaryColor,
                       ),
                       child: SvgPicture.asset('assets/images/menu_two.svg'),
                     ),
-                    SizedBox(width: 18),
+                    SizedBox(width: AppSizes.w18),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -30,7 +31,7 @@ class Header extends StatelessWidget {
                           "LOCATION",
                           style: TextStyle(
                             color: LightColors.orangeColor,
-                            fontSize: 12,
+                            fontSize: AppSizes.sp12,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -40,7 +41,7 @@ class Header extends StatelessWidget {
                               "Halal Lab office",
                               style: TextStyle(
                                 color: Color(0xff676767),
-                                fontSize: 14,
+                                fontSize: AppSizes.sp14,
                                 fontWeight: FontWeight.w400,
                               ),
                             ),
@@ -49,7 +50,7 @@ class Header extends StatelessWidget {
                      ],
                     ),
                   Spacer(),
-                  CircleAvatar(radius: 25,backgroundColor: LightColors.primaryColor,)],
+                  CircleAvatar(radius: AppSizes.r25,backgroundColor: LightColors.primaryColor,)],
                   
                 ),
     );

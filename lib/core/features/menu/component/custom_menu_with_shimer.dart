@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:wasel_app/core/shared/custome_shimmer_widget.dart';
-import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 
 
 class CustomMenuWithShimer extends StatelessWidget {
@@ -18,8 +18,8 @@ class CustomMenuWithShimer extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return Container(
                           margin: EdgeInsets.symmetric(
-                            horizontal: 5,
-                            vertical: 15,
+                            horizontal: AppSizes.mw5,
+                            vertical: AppSizes.mh15,
                           ),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,11 +27,11 @@ class CustomMenuWithShimer extends StatelessWidget {
                               Container(
                                 decoration: BoxDecoration(
                                   color: Color(0xFF98A8B8),
-                                  borderRadius: BorderRadius.circular(16),
+                                  borderRadius: BorderRadius.circular(AppSizes.r16),
                                 ),
                                 child: CustomeShimmerWidget(
-                                  width: 102,
-                                  hight: 102,
+                                  width: AppSizes.w102,
+                                  hight: AppSizes.w102,
                                   redus: 16,
                                 ),
                               ),

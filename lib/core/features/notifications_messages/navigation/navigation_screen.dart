@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/di/injection_container.dart';
 import 'package:wasel_app/core/features/notifications_messages/messages/conversation_screen.dart';
 import 'package:wasel_app/core/features/notifications_messages/messages/cubit/messages_cubit.dart';
@@ -19,7 +20,7 @@ class NavigationScreen extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(title: Text("${state.currentIndex == 0 ? "Notifications" : "Messages"}"),),
             body: Padding(
-              padding: const EdgeInsets.all(10),
+              padding:  EdgeInsets.all(AppSizes.r10),
               child: Column(
                 children: [
                   BlocBuilder<MessagesCubit, MessagesState>(
@@ -44,7 +45,7 @@ class NavigationScreen extends StatelessWidget {
                       );
                     },
                   ),
-                  const SizedBox(height: 20),
+                   SizedBox(height: AppSizes.h20),
 
                   Expanded(
                     child: state.currentIndex == 0
