@@ -3,10 +3,12 @@ part of 'item_cubit.dart';
 
 @immutable
 class ItemState {
+  final List<MenuModel> items;
   final RequestStatus status;
-  final List<File> imageList;
+  final List<String> imageList;
+  final List<String> oldImages;
   final String details;
-  final String descraption;
+  final String description;
   final String category;
   final bool isPicUp;
   final bool isDelivery;
@@ -16,8 +18,10 @@ class ItemState {
   ItemState({
     this.status = RequestStatus.initial,
     this.imageList = const [],
+    this.oldImages = const [],
+    this.items = const [],
     this.details = '',
-    this.descraption = '',
+    this.description = '',
     this.category = "",
     this.isPicUp = true,
     this.isDelivery = false,
@@ -28,7 +32,9 @@ class ItemState {
 
   ItemState copyWith({
     RequestStatus? status,
-    List<File>? imageList,
+    List<String>? imageList,
+    List<String>? oldImages,
+    List<MenuModel>? menuModel,
     String? details,
     String? descraption,
     String? category,
@@ -41,14 +47,16 @@ class ItemState {
     return ItemState(
       status: status ?? this.status,
       imageList: imageList ?? this.imageList,
+      oldImages: oldImages ?? this.oldImages,
       details: details ?? this.details,
-      descraption: descraption ?? this.descraption,
+      description: descraption ?? this.description,
       category: category ?? this.category,
       isPicUp: isPicUp ?? this.isPicUp,
       isDelivery: isDelivery ?? this.isDelivery,
       itemName: itemName ?? this.itemName,
       itemPrice: itemPrice ?? this.itemPrice,
       errormessage: errormessage ?? this.errormessage,
+      items: menuModel ?? this.items,
     );
   }
 }

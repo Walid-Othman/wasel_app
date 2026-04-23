@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:wasel_app/core/di/injection_container.dart';
 import 'package:wasel_app/core/features/dashboard_home/home_screen.dart';
 
-import 'package:wasel_app/core/features/items/add_item_screen.dart';
+import 'package:wasel_app/core/features/menu/items/add_item_screen.dart';
+import 'package:wasel_app/core/features/menu/items/cubit/item_cubit.dart';
 import 'package:wasel_app/core/features/notifications_messages/navigation/navigation_screen.dart';
 
 import 'package:wasel_app/core/features/profile/profile_screen.dart';
@@ -18,6 +20,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  final ItemCubit itemCubit = sl<ItemCubit>();
   int _currentIndex = 0;
 
   List<Widget> screens = [
@@ -46,6 +49,9 @@ class _MainScreenState extends State<MainScreen> {
           setState(() {
             _currentIndex = index ?? 0;
           });
+          if (index == 2) {
+            itemCubit.clearAllFields();
+          }
         },
         currentIndex: _currentIndex,
         items: [
