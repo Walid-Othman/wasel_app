@@ -18,7 +18,6 @@ class _FoodCardState extends State<FoodCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 350,
       decoration: BoxDecoration(
         color: LightColors.primaryColor,
       ),
@@ -35,7 +34,7 @@ class _FoodCardState extends State<FoodCard> {
                 child: ClipRRect( 
                   borderRadius: BorderRadius.circular(AppSizes.r20),
                   child: PageView.builder(
-                    itemCount: widget.data.foodImages.length,
+                    itemCount: widget.data.images.length,
                     onPageChanged: (int page) {
                       setState(() {
                         _currentPage = page;
@@ -46,7 +45,7 @@ class _FoodCardState extends State<FoodCard> {
                         decoration: BoxDecoration(
                           color: Color(0xFF9DAAB9)
                         ),
-                        child: CustomeCachedNetworkImage(urlImage: widget.data.foodImages.toString()));
+                        child: CustomeCachedNetworkImage(urlImage: widget.data.images[index]));
                     },
                   ),
                 ),
@@ -65,7 +64,7 @@ class _FoodCardState extends State<FoodCard> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
-                    widget.data.foodImages.length,
+                    widget.data.images.length,
                     (index) => _buildDot(index == _currentPage),
                   ),
                 ),

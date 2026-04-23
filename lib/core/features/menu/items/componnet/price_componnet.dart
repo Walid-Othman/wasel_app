@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wasel_app/core/app_sizes/app_sizes.dart';
-import 'package:wasel_app/core/features/items/componnet/custome_text_form_field.dart';
-import 'package:wasel_app/core/features/items/cubit/item_cubit.dart';
+import 'package:wasel_app/core/features/menu/items/componnet/custome_text_form_field.dart';
+import 'package:wasel_app/core/features/menu/items/cubit/item_cubit.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
 
 class PriceComponnet extends StatelessWidget {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wasel_app/core/app_sizes/app_sizes.dart';
-import 'package:wasel_app/core/features/reviews/edit_review_screen.dart';
+import 'package:wasel_app/core/shared/component/custome_bottom_sheet.dart';
+import 'package:wasel_app/core/shared/component/custome_show_alert_dialog.dart';
 import 'package:wasel_app/core/shared/custome_cached_network_image.dart';
 import 'package:wasel_app/core/shared/widgets/cart_contanir.dart';
 import 'package:wasel_app/core/theme/light_colors/light_colors.dart';
@@ -11,7 +12,7 @@ class CustomeListReview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.all(AppSizes.r16),
+      padding: EdgeInsets.all(AppSizes.r16),
       child: CustomScrollView(
         slivers: [
           SliverList.builder(
@@ -48,103 +49,30 @@ class CustomeListReview extends StatelessWidget {
                                     showModalBottomSheet(
                                       context: context,
 
-                                      shape:  RoundedRectangleBorder(
+                                      shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.vertical(
                                           top: Radius.circular(AppSizes.r20),
                                         ),
                                       ),
                                       builder: (context) {
-                                        return Container(
-                                          padding:  EdgeInsets.symmetric(
-                                            vertical: AppSizes.ph20,
-                                          ),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: [
-                                              Container(
-                                                width: AppSizes.w40,
-                                                height: AppSizes.h5,
-                                                decoration: BoxDecoration(
-                                                  color: Colors.grey[300],
-                                                  borderRadius:
-                                                      BorderRadius.circular(AppSizes.r10),
-                                                ),
-                                              ),
-                                               SizedBox(height: AppSizes.h20),
-
-                                              ListTile(
-                                                leading: const Icon(
-                                                  Icons.edit,
-                                                  color: Colors.blue,
-                                                ),
-                                                title: const Text(
-                                                  'Edit Review',
-                                                ),
-                                                onTap: () async {
-                                                  Navigator.pop(context);
-                                                  await Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          EditReviewScreen(
-                                                            data: data,
-                                                          ),
-                                                    ),
-                                                  );
-                                                },
-                                              ),
-
-                                              ListTile(
-                                                leading: const Icon(
-                                                  Icons.delete,
-                                                  color: Colors.red,
-                                                ),
-                                                title: const Text(
-                                                  'Delete Review',
-                                                  style: TextStyle(
-                                                    color: Colors.red,
+                                        return CustomeBottomSheet.justDelete(
+                                          listTitletwo: "Delete Reviews",
+                                          onDelete: () async {
+                                           await showDialog(
+                                              context: context,
+                                              builder: (context) =>
+                                                  CustomeShowAlertDialog(
+                                                    title: "Delete Review",
+                                                    content:
+                                                        "Are you sure you want to delete this review?",
+                                                    onTap: () {
+                                                      Navigator.pop(context);
+                                                    },
                                                   ),
-                                                ),
-                                                onTap: () {
-                                                  Navigator.pop(context);
-                                                  showDialog(
-                                                    context: context,
-                                                    builder: (context) =>
-                                                        AlertDialog(
-                                                          title: Text(
-                                                            "Delete Review",
-                                                          ),
-                                                          content: Text(
-                                                            "Are you sure you want to delete review",
-                                                          ),
-                                                          actions: [
-                                                            TextButton(
-                                                              onPressed: () {
-                                                                Navigator.pop(
-                                                                  context,
-                                                                );
-                                                              },
-                                                              child: Text(
-                                                                "Cancel",
-                                                              ),
-                                                            ),
-                                                            TextButton(
-                                                              onPressed: () {},
-                                                              child: Text(
-                                                                "Delete",
-                                                                style: TextStyle(
-                                                                  color: Colors
-                                                                      .red,
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                  );
-                                                },
-                                              ),
-                                            ],
-                                          ),
+                                            
+                                            );
+                                            Navigator.pop(context);
+                                          },
                                         );
                                       },
                                     );
