@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/features/profile/custome_list_tilte.dart';
+import 'package:wasel_app/core/features/reviews/user_review_screen.dart';
 import 'package:wasel_app/core/shared/widgets/cart_contanir.dart';
 
 class ProfileInfoComponent extends StatelessWidget {
@@ -51,7 +52,12 @@ class ProfileInfoComponent extends StatelessWidget {
               child: CustomeListTilte(
                 image: "assets/images/command.svg",
                 title: "User Reviews",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UserReviewScreen()),
+                  );
+                },
               ),
             ),
             SizedBox(height: AppSizes.h20),

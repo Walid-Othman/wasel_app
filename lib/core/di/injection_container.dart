@@ -9,14 +9,14 @@ import 'package:wasel_app/core/features/notifications_messages/notifications/cub
 
 import 'package:wasel_app/core/features/reviews/cubit/review_cubit.dart';
 
-
 final sl = GetIt.instance;
 Future<void> init() async {
   sl.registerLazySingleton(() => ReviewCubit());
   sl.registerLazySingleton(() => OrdersCubit());
   sl.registerLazySingleton(() => NotificationsCubit());
   sl.registerLazySingleton(() => MessagesCubit());
-  sl.registerLazySingleton(
-    () => ItemCubit(itemRepo: ItemRepo(itemService: ItemSevice(Dio()))),
-  );
+  sl.registerLazySingleton(() => ItemSevice(sl()));
+  sl.registerLazySingleton(() => ItemRepo(itemService: sl()));
+  sl.registerLazySingleton(() => ItemCubit(itemRepo: sl()));
+  sl.registerLazySingleton(() => Dio());
 }
