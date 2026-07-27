@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wasel_app/core/app_sizes/app_sizes.dart';
 import 'package:wasel_app/core/features/profile/custome_list_tilte.dart';
+import 'package:wasel_app/core/features/profile_info/profile_info_screen.dart';
 import 'package:wasel_app/core/features/reviews/user_review_screen.dart';
 import 'package:wasel_app/core/shared/widgets/cart_contanir.dart';
 
@@ -18,7 +19,16 @@ class ProfileInfoComponent extends StatelessWidget {
             CartContanir(
               child: Column(
                 children: [
-                  CustomeListTilte(onTap: () {}),
+                  CustomeListTilte(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfileInfoScreen(),
+                        ),
+                      );
+                    },
+                  ),
                   SizedBox(height: AppSizes.h8),
                   CustomeListTilte(
                     onTap: () {},
