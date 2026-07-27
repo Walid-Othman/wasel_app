@@ -217,6 +217,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.9"
+  dart_either:
+    dependency: "direct main"
+    description:
+      name: dart_either
+      sha256: "813687ccfd757124e980a292df54a67c35642d0312bd2d9f70595708295e88d7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.0"
   dart_style:
     dependency: transitive
     description:
@@ -250,7 +258,7 @@ packages:
     source: hosted
     version: "2.1.0"
   equatable:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: equatable
       sha256: "3e0141505477fd8ad55d6eb4e7776d3fe8430be8e497ccb1521370c3f21a3e2b"

@@ -6,6 +6,7 @@ import 'package:wasel_app/core/features/menu/items/repo/item_repo.dart';
 import 'package:wasel_app/core/features/menu/items/services/item_sevice.dart';
 import 'package:wasel_app/core/features/notifications_messages/messages/cubit/messages_cubit.dart';
 import 'package:wasel_app/core/features/notifications_messages/notifications/cubit/notifications_cubit.dart';
+import 'package:wasel_app/core/features/profile_info/cubit/profile_info_cubit.dart';
 
 import 'package:wasel_app/core/features/reviews/cubit/review_cubit.dart';
 
@@ -19,4 +20,5 @@ Future<void> init() async {
   sl.registerLazySingleton(() => ItemRepo(itemService: sl()));
   sl.registerLazySingleton(() => ItemCubit(itemRepo: sl()));
   sl.registerLazySingleton(() => Dio());
+  sl.registerLazySingleton<ProfileInfoCubit>(() => ProfileInfoCubit());
 }
